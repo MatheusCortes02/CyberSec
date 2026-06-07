@@ -12,6 +12,8 @@
 
 <body>
 
+<div id="hackerToast" class="hacker-toast">Acesso concedido — modo hacker ativado!</div>
+
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
   <div class="container">
     <a class="navbar-brand">CyberSec</a>
@@ -26,6 +28,7 @@
         <li class="nav-item"><a href="#areas" class="nav-link">Áreas</a></li>
         <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
         <li class="nav-item"><a href="#cursos" class="nav-link">Cursos</a></li>
+        <li class="nav-item"><a href="#quiz" class="nav-link">Quiz</a></li>
       </ul>
 
       <div class="d-flex align-items-center mt-2 mt-lg-0">
@@ -57,9 +60,12 @@
         <div class="hero-image-wrap">
           <img src="img/hacker.jpg" alt="Hacker Ético" class="hero-img">
           <div class="hero-box">
-            <p>> scanning vulnerabilities...</p>
-            <p>> access granted</p>
-            <p class="blinking">>> _</p>
+            <div id="terminalOutput">
+              <p>> scanning vulnerabilities...</p>
+              <p>> access granted</p>
+              <p>> digite "help" e pressione Enter</p>
+            </div>
+            <p class="terminal-line">&gt;&gt; <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal interativo"></p>
           </div>
         </div>
       </div>
@@ -227,6 +233,25 @@
   </div>
 </section>
 
+<section id="quiz" class="section container">
+  <h2>Teste seus Conhecimentos</h2>
+  <p class="section-desc">Responda ao quiz rápido e descubra o quanto você já sabe sobre segurança da informação.</p>
+
+  <div class="quiz-card">
+    <div id="quizQuestion">
+      <p class="quiz-progress" id="quizProgress">Pergunta 1 de 5</p>
+      <h5 id="quizQuestionText"></h5>
+      <div id="quizOptions" class="quiz-options"></div>
+    </div>
+
+    <div id="quizResult" class="quiz-result d-none">
+      <h5 id="quizResultTitle"></h5>
+      <p id="quizResultText"></p>
+      <button class="btn btn-outline-success" id="quizRestartBtn">Refazer quiz</button>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="row g-4 mb-4">
@@ -241,6 +266,7 @@
           <li><a href="#areas">Áreas</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#quiz">Quiz</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-4">
